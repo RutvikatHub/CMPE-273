@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+
+document.write(false);
+document.write(" : ");
+document.write(typeof(false) + "<br>");
+
+document.write(String(false));
+document.write(" : ");
+document.write(typeof(String(false)) + "<br>");
+
+document.write(false);
+document.write(" : ");
+document.write(Number(false));
+document.write(" : ");
+document.write(typeof(Number(false)) + "<br><br>");
+
+var d = new Date();
+document.write(d.getDate());
+document.write(" : ");
+document.write(typeof(d.getDate()) + "<br>");
+
+var d = new Date();
+document.write(d.getDate().toString());
+document.write(" : ");
+document.write(typeof(d.getDate().toString()) + "<br><br>");
+
+document.write(String(Date()));
+document.write(" : ");
+document.write(typeof(String(Date())) + "<br>");
+
+document.write(Number(d));
+document.write(" : ");
+document.write(typeof(Number(d)) + "<br>");
+
+d = new Date();
+Number(d);
+
+</script>
+<body>
+</body>
+</html>

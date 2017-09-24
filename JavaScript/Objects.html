@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Know the founders !!!</title>
+<script type="text/javascript">
+	function founder(name, foundedOn, education){
+		this.name = name;
+		this.foundedOn = foundedOn;
+		this.education = education;
+	}
+	
+	function knowTheFounder() {
+		var output = "";
+		var input = document.getElementById('option').value;
+		if(input == 1) {
+			output = new founder("Drew Houston", 2007, "MIT");
+		}
+		else if(input == 2) {
+			output = new founder("Gordon Moore", 1968, "SJSU and UCB");
+		}
+		else if(input == 3) {
+			output = new founder("Elon Musk", 2007, "Penn State");
+		}
+		document.getElementById('result').innerHTML = "The company was founded in the year " + output.foundedOn + ". The founder " + output.name + " completed his education from " + output.education +".";
+	}
+</script>	
+</head>
+
+<body>
+<h3>WHO ARE THE FOUNDERS</h3>
+<h5>1. Dropbox <br> 2. Intel <br> 3. Tesla</h5>
+<input type = "text" id = "option"></input>
+<input type="button" id = "button" value = "Get Info" onClick = "knowTheFounder()"></input>
+<p id = "result"></p>
+</body>
+</html>

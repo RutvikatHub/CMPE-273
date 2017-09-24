@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Functions</title>
+<script type="text/javascript">
+
+function FtoC() {
+	var tempinF = document.getElementById('fahrenheit').value;
+	var tempinC = ((5 / 9) * (tempinF - 32));
+	tempinC = tempinC.toFixed(2);
+	document.getElementById('tempinC').innerHTML = tempinC + " °C";
+}
+
+</script>
+</head>
+<body>
+<h3>TEMPERATURE CONVERSION TOOL: °F to °C</h3>
+<h4>Enter the temperature in Fahrenheit</h4>
+<input type = "number" id = "fahrenheit"></input>
+<input type = "button" id = "calculate" value = "Calculate °C" onclick = "FtoC()"></input>
+<h4>Temperature in °C is : </h4>
+<br>
+<p id = "tempinC"></p>
+</body>
+</html>

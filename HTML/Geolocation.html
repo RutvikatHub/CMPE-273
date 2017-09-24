@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+	function getMyLocation() {
+		if(navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(exactLocation);
+		}
+		else {
+			document.getElementById("location").innerHTML = "Track unsuccessful";
+		}
+	}
+	
+	function exactLocation(position) {
+		document.getElementById("location").innerHTML = "Longitude : " + position.coords.longitude + "<br>Latitude : " + position.coords.latitude + "<br>";
+	}
+</script>
+
+<body>
+	<input type = "button" value = "Get location" onclick="getMyLocation()">
+	<p id = "location"></p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Events - most of'em in one</title>
+</head>
+
+<script type="text/javascript">
+function checkWinner() {
+	var Winner = "";
+	var Hometeam = document.getElementById("Hometeam").value;
+	var Opponent = document.getElementById("Opponent").value;
+	if(Hometeam > Opponent) {
+		document.getElementById("Winner").innerHTML = "Hometeam Wins";
+	}
+	else if(Hometeam < Opponent) {
+		document.getElementById("Winner").innerHTML = "Opponent Wins";
+	}
+	else {
+		document.getElementById("Winner").innerHTML = "Match DRAW !!!";
+	}
+}
+
+</script>
+
+
+<h3>MATCH REFEREE INTERFACE</h3>
+<!-- Event handlers onload and onunload trigger at page open and exit -->
+<body onload="alert('Welcome')" onunload="alert('See you again!')">
+
+<!-- Event handler onmouseover and onmouseout trigger upon hovering in and out on link -->
+<a href = "http://www.sjsu.edu">Welcome to Spartan Football match</a>
+<br>
+<a onmouseover="alert('Go Spartans')">Hover here</a>
+
+<form>
+<br>
+<input type = "button" value = "Give player a warning" onClick="alert('     YELLOW CARD \n------------------------\nClick OK for RED CARD');alert(' RED CARD \n--------------\nPLAYER OUT');"/>
+</form>
+<br>
+<h4>Enter the respective scores</h4>
+
+<input type = "text" value = "Hometeam score" id = "Hometeam"></input>
+<input type = "text" value = "Opponent score" id = "Opponent"></input>
+<input type = "button" value = "Result" id = "winner" onClick = "checkWinner()"></input>
+
+<p id = "Winner" style="color:green;font-size:500%;"></p>
+</body>
+</html>

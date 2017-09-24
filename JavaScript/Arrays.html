@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Arrays - Operations and Methods</title>
+</head>
+<script type="text/javascript">
+	var average = new Array("NCSU", "NEU", "NYU", "UTD", "CSULB");
+	var ambitious = new Array("MIT", "Harvard", "Stanford", "UCB", "UCLA");
+	
+	var combine = ambitious.concat(average);
+
+	document.write("CONCAT ----" + combine);
+	document.write("<br><br>");
+	
+	//wait...when did CSULB became ambitious ;)
+	combine.pop();
+	document.write("POP ----" + combine);
+	document.write("<br><br>");	
+	
+	combine.push("USC");
+	document.write("PUSH ----" + combine);
+	document.write("<br><br>");
+	
+	combine.reverse();
+	document.write("REVERSE ----" + combine);
+	document.write("<br><br>");
+	
+	combine.sort();
+	document.write("SORT ----" + combine);
+	document.write("<br><br>");
+	
+	var uniString = combine.join();
+	document.write("STRING ----" + uniString);
+	document.write("<br><br>");
+	
+	var associativeArray = new Array(3);
+	associativeArray["One"] = "MIT";
+	associativeArray["Two"] = "Harvard";
+	associativeArray["Three"] = "Stanford";
+	
+	document.write("Associative Array --- " + associativeArray["One"] + " tops the university list again !!!");
+
+</script>
+<body>
+	
+</body>
+</html>

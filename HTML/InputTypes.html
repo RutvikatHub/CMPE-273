@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Input Types</title>
+</head>
+<body>
+	
+	<form action = "first.html" method = "get">
+		<!-- TEXT -->
+		<label>
+			TEXT goes here ... <br>
+			<input type = "text" id = "text">
+		</label>
+		<br><br>
+		
+		<!-- SEARCH -->
+		<label>
+			SEARCH goes here ... <br>
+			<input type = "search" id = "search">		
+		</label>
+		<br><br>
+		
+		<!-- EMAIL -->
+		<label>
+			EMAIL goes here ...<br>
+			<input type = "email" id = "email" multiple autofocus>
+		</label>
+		<br><br>
+		
+		<!-- URL -->
+		<label>
+			URL goes here ...<br>
+			<input type = "url" id = "url" required>
+		</label>
+		<br><br>
+		
+		<!-- TELEPHONE -->
+		<label>
+			Contact number goes here ...<br>
+			<input type = "tel" id = "telephone">
+		</label>
+		<br><br>
+		
+		<!-- NUMBER -->
+		<label>
+			Number goes here ...<br>
+			<input type = "number" min = "0" max = "10" step = "1" id = "number">
+		</label>
+		<br><br>
+		
+		<!-- RANGE -->
+		<label>
+			Scroll up/down to select range ...<br>
+			<input type = "range" min = "0" max = "100" step = "10" id = "range">
+		</label>
+		<br><br>
+		
+		<!-- DATE -->
+		<label>
+			Select date ...<br>
+			<input type = "date">
+		</label>
+		<br><br>
+		
+		<!-- MONTH -->
+		<label>
+			Select month ...<br>
+			<input type = "month">
+		</label>
+		<br><br>
+		
+		<!-- WEEK -->
+		<label>
+			Select week ...<br>
+			<input type = "week">
+		</label>
+		<br><br>
+		
+		<!-- TIME -->
+		<label>
+			Select time ...<br>
+			<input type = "time" step = "900">
+		</label>
+		<br><br>
+		
+		<!-- COLOR -->
+		<label>
+			Select color ...<br>
+			<input type = "color">
+		</label>
+		<br><br>
+		
+		<!-- PATTERN -->
+		<label>
+			Pin code goes here ...<br>
+			<input type = "text" name = "pin code" pattern = "[0-9]{5}" title = "Pin code">
+		</label>
+		<br><br>
+		
+		<!-- onClick event does nothing -->
+		<input type = "button" id = "button" value = "PRESS" onclick="alert('Button pressed !!!')">
+		<br><br>
+		
+		<input type = "submit"></input>
+		<br><br>
+	</form>
+	
+	
+	
+</body>
+</html>

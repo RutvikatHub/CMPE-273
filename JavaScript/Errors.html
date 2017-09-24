@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+
+function division() {
+	var num = document.getElementById("num").value;
+	var den = document.getElementById("den").value;
+	try {
+		if (den == 0) {
+			throw {
+				error: "The denominator can not be negative"
+			}
+		}
+		else {
+			document.write("The division is "+ num/den);
+		}
+	}
+	catch (exception) {
+		document.write("Error message : " + exception.error);
+	}
+}
+
+
+</script>
+
+<body>
+<input type = "text" id = "num" value = "Enter numerator"></input>
+<input type = "text" id = "den" value = "Enter denominator"></input>
+<input type = "button" id = "button" value = "Get solution" onClick = "division()"></input>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var University = function(course) {
+		this.course = course;
+	}
+	
+	University.prototype.getCourse = function() {
+		return this.course;
+	}
+	
+	var PublicUniversity = function(stateFunding) {
+		this.stateFunding = stateFunding;
+	}
+
+	//A Public university receives funding from state legislatures
+	PublicUniversity.prototype = new University("EST");
+	var pu = new PublicUniversity(10000);
+	
+	document.write("At SJSU, you will specialize in " + pu.getCourse() + " and may receive funding upto " + pu.stateFunding + ". <br><br>");
+	
+	var PrivateUniversity = function(name) {
+		this.name = name;
+	}
+	
+	PrivateUniversity.prototype.getNameLength = function() {
+		return "The name of " + this.name + " is " + this.name.length + " characters long.";
+	}
+	
+	var pr = new PrivateUniversity("Northeastern University");
+	document.write(pr.getNameLength());
+	
+	document.write("<br><br>");
+	//You will get funding at public univeristy and not private university
+	document.write("Will you receive funding at " + pr.name + " ? " + pr.hasOwnProperty('stateFunding'));
+	
+	//alert(pu instanceof University);
+	//alert returns false as Private University does not inherit University
+	alert(pr instanceof University);
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Events</title>
+</head>
+<script type="text/javascript">
+var input = Number(prompt(" Please enter the course number (Exclude CMPE) \n Available courses 202/272/273"));
+if(input == 202) {
+	var sectionOne = Number(prompt(" Please enter the section number (Exclude 0) \n Available sections 1/2/3"));
+	switch(sectionOne) {
+		case 1:
+			alert(" Class: 44869 \n Prof. Mohamed E Fayad \n Mo 6:00PM - 8:45PM \n Engineering Building 337");
+			break;
+		case 2:
+			alert(" Class: 46986 \n Prof. Mohamed E Fayad \n Tu 6:00PM - 8:45PM \n Engineering Building 325");
+			break;
+		case 3:
+			alert(" Class 47426 \n Prof. Paul Nguyen \n Sa 12:00PM - 2:45PM \n Engineering Building 189");
+			break;
+	}
+}
+else if(input == 272) {
+	var sectionTwo = Number(prompt(" Please enter the section number (Exclude 0) \n Available sections 1/2"));
+	switch(sectionTwo) {
+		case 1:
+			alert(" Class: 46446 \n Prof. Richard Sinn \n Sa 9:15AM - 12:00PM \n Engineering Building 337");
+			break;
+		case 2: 
+			alert(" Class: 43300 \n Prof. Rakesh Ranjan \n Mo 6:00PM - 8:45PM \n Engineering Building 189");
+			break;
+	}
+}
+else if(input == 273) {
+	var sectionThree = Number(prompt(" Please enter the section number (Exclude 0) \n Available sections 1/2"));
+	switch(sectionThree) {
+		case 1:
+			alert(" Class: 44223 \n Prof. Sithu Aung \n We 6:00PM - 8:45PM \n Dudley Moorhead Hall 160");
+			break;
+		case 2:
+			alert(" Class: 44150 \n Prof. Simon Shim \n MoWe 4:30PM - 5:45PM \n Washington Square Hall 109");
+			break;
+	}
+}
+else {
+	alert("Kindly enter a valid course number");
+}
+</script>
+
+<body>
+<h3>CLASS SCHEDULE MANAGEMENT</h3>
+</body>
+</html>

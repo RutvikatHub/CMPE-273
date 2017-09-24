@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Regular Expresions</title>
+</head>
+<script type="text/javascript">
+function separator() {
+	document.getElementById("output").value = "";
+	var inputString = document.getElementById("input").value;
+	
+	var numbers = inputString.match(/\d+/g);
+	
+	if(numbers != null) {
+		for(var i = 0; i < numbers.length; i++) {
+			document.getElementById("output").value += numbers[i] + "\r\n";
+		}
+		
+	}
+}
+</script>
+<body>
+<input type = "text" id = "input" value = "Enter text here"></input>
+<input type = "button" id = "button" value = "Get digits" onclick="separator()"></input>
+<textarea id = "output" rows = "4" cols = "10"></textarea>
+</body>
+</html>

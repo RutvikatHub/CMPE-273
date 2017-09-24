@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Get respective school names</h3>
+
+<p id="output"></p>
+
+<script>
+var text = '{"university":[' +
+'{"field":"Engineering","college":": Charles W. Davidson College of Engineering" },' +
+'{"field":"Business","college":": Lucas College and Graduate School of Business" },' +
+'{"field":"Science","college":": College of Science" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("output").innerHTML =
+obj.university[1].field + " " + obj.university[1].college;
+</script>
+
+</body>
+</html>
